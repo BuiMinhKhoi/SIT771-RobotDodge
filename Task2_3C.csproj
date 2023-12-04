@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <RootNamespace>Task2._3C</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+        <StartAction>Project</StartAction>
+        <StartWorkingDirectory>.</StartWorkingDirectory>
+        <ExternalConsole>true</ExternalConsole>
+        <EnvironmentVariables>
+            <Variable name="DYLD_LIBRARY_PATH" value="/Users/bmk/.splashkit/lib/macos"/>
+        </EnvironmentVariables>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <PlatformTarget>ARM64</PlatformTarget>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <PlatformTarget>ARM64</PlatformTarget>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SplashKit" Version="1.0.1"/>
+    </ItemGroup>
+
+</Project>
